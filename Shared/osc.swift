@@ -75,6 +75,7 @@ let offlineJSON = """
     ]
 """
 
+
 class OSCAPI {
     // Display pre-determined JSON if offline
     func offlineData(completion:@escaping ([OSCData]) -> ()) {
@@ -98,31 +99,11 @@ class OSCAPI {
         .resume()
     }
     
-    // Download ZIP from OSC servers
-    func getZip(filepath: URL, url: String) {
-        if let zipURL = URL(string: url) {
-            URLSession.shared.downloadTask(with: zipURL) { (tempFileUrl, response, error) in
-                if let zipTempFileUrl = tempFileUrl {
-                    do {
-                        // Write to file
-                        let zipData = try Data(contentsOf: zipTempFileUrl)
-                        try zipData.write(to: filepath)
-                        
-                    } catch {
-                        print("Error")
-                    }
-                }
-            }.resume()
-        }
-    }
-    
     // In iOS we will have to pass the app name, as the user cannot choose where
     // or what to save the ZIP under
     func getZipiOS(url: String, app_name: String) {
-
         let documentDirectory = FileManager.default.urls(for: .documentDirectory,
                                                         in: .userDomainMask)[0]
-        print(documentDirectory)
         let imageName = documentDirectory.appendingPathComponent("\(app_name).zip")
         
         if let imageUrl = URL(string: url) {
