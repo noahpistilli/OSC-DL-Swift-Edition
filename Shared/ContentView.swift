@@ -1,3 +1,10 @@
+//
+//  ContentView.swift
+//  Open Shop Channel Downloader
+//
+//  Created by Noah Pistilli on 2021-06-17.
+//
+
 import SwiftUI
 
 

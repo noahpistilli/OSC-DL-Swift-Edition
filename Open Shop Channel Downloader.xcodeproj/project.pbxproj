@@ -25,6 +25,8 @@
 		F2261938267CD46700CC3796 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = F2261937267CD46700CC3796 /* NIO */; };
 		F2C5C2FF267FD21C008E2F5D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5C2FE267FD21C008E2F5D /* AppData.swift */; };
 		F2C5C300267FD21C008E2F5D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5C2FE267FD21C008E2F5D /* AppData.swift */; };
+		F2CAA6E62680E9A000D1ADDB /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAA6E52680E9A000D1ADDB /* utils.swift */; };
+		F2CAA6E72680E9A000D1ADDB /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAA6E52680E9A000D1ADDB /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,7 @@
 		F226192A267CCEE800CC3796 /* wiiload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wiiload.swift; sourceTree = "<group>"; };
 		F2261933267CCF9F00CC3796 /* Open Shop Channel Downloader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Open Shop Channel Downloader.entitlements"; sourceTree = "<group>"; };
 		F2C5C2FE267FD21C008E2F5D /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		F2CAA6E52680E9A000D1ADDB /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 				F22618EB267CCDD700CC3796 /* Open_Shop_Channel_DownloaderApp.swift */,
 				F22618EC267CCDD700CC3796 /* ContentView.swift */,
 				F2261927267CCE4A00CC3796 /* osc.swift */,
+				F2CAA6E52680E9A000D1ADDB /* utils.swift */,
 				F2C5C2FE267FD21C008E2F5D /* AppData.swift */,
 				F226192A267CCEE800CC3796 /* wiiload.swift */,
 				F22618ED267CCDD900CC3796 /* Assets.xcassets */,
@@ -328,6 +332,7 @@
 				F226190F267CCDD900CC3796 /* ContentView.swift in Sources */,
 				F226192B267CCEE900CC3796 /* wiiload.swift in Sources */,
 				F2261928267CCE4A00CC3796 /* osc.swift in Sources */,
+				F2CAA6E62680E9A000D1ADDB /* utils.swift in Sources */,
 				F226190D267CCDD900CC3796 /* Open_Shop_Channel_DownloaderApp.swift in Sources */,
 				F2C5C2FF267FD21C008E2F5D /* AppData.swift in Sources */,
 			);
@@ -340,6 +345,7 @@
 				F2261910267CCDD900CC3796 /* ContentView.swift in Sources */,
 				F226192C267CCEE900CC3796 /* wiiload.swift in Sources */,
 				F2261929267CCE4A00CC3796 /* osc.swift in Sources */,
+				F2CAA6E72680E9A000D1ADDB /* utils.swift in Sources */,
 				F226190E267CCDD900CC3796 /* Open_Shop_Channel_DownloaderApp.swift in Sources */,
 				F2C5C300267FD21C008E2F5D /* AppData.swift in Sources */,
 			);

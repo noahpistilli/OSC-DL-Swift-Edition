@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AppData: View {
     var data: OSCData
+    @State var progressText: String = "Downloading"
     @State var showAlert = true
     @State var dataTask: URLSessionDownloadTask?
     @State var observation: NSKeyValueObservation?
@@ -23,7 +24,11 @@ struct AppData: View {
                 .padding(.leading, 5)
             Text(data.short_description)
                 .font(.title3)
+            #if os(macOS)
+                .padding(.top, -160)
+            #elseif os(iOS)
                 .padding(.top, -145)
+            #endif
                 .padding(.leading, 5)
             #if os(macOS)
             Button("Download") {
@@ -679,15 +684,15 @@ struct AppData: View {
             }
             HStack {
                 if progress != 0 {
-                    ProgressView("Downloading", value: progress, total: total)
+                    ProgressView(progressText, value: progress, total: total)
                         .progressViewStyle(LinearProgressViewStyle())
                         .offset(x: 0, y: 100)
                 }
                 if progress == 1 {
                     Text("")
                         .alert(isPresented: $showAlert) {
-                            Alert(title: Text("Download Complete!"), message: Text("The ZIP has been downloaded to your specified directory."), dismissButton: .default(Text("Ok")))
-                        }
+                        Alert(title: Text("Download Complete!"), message: Text("The ZIP has been downloaded to your specified directory."), dismissButton: .default(Text("Ok")))
+                    }
                 }
             }
         }
