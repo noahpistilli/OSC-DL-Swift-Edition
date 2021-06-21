@@ -23,7 +23,7 @@ struct AppData: View {
                 .padding(.leading, 5)
             Text(data.short_description)
                 .font(.title3)
-                .padding(.top, -160)
+                .padding(.top, -145)
                 .padding(.leading, 5)
             #if os(macOS)
             Button("Download") {
@@ -50,6 +50,8 @@ struct AppData: View {
                 // I pass a fake file URL as it will be overwritten in the function
                 getZip(filepath: URL(string: "moment")!, url: data.zip_url)
             }
+            .buttonStyle(RoundedRectangleButtonStyle())
+            .offset(y: 150)
             #endif
             Divider()
                 .padding(.top, -150)
@@ -669,7 +671,11 @@ struct AppData: View {
             HStack {
                 Text(data.long_description)
                     .padding(.leading, 5)
+                #if os(macOS)
                     .padding(.top, -80)
+                #elseif os(iOS)
+                    .padding(.top, -60)
+                #endif
             }
             HStack {
                 if progress != 0 {
