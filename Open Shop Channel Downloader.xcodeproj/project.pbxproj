@@ -17,16 +17,15 @@
 		F2261912267CCDD900CC3796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F22618ED267CCDD900CC3796 /* Assets.xcassets */; };
 		F2261928267CCE4A00CC3796 /* osc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261927267CCE4A00CC3796 /* osc.swift */; };
 		F2261929267CCE4A00CC3796 /* osc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261927267CCE4A00CC3796 /* osc.swift */; };
-		F226192B267CCEE900CC3796 /* wiiload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226192A267CCEE800CC3796 /* wiiload.swift */; };
 		F226192C267CCEE900CC3796 /* wiiload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226192A267CCEE800CC3796 /* wiiload.swift */; };
-		F226192F267CCF5000CC3796 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F226192E267CCF5000CC3796 /* ZIPFoundation */; };
 		F2261932267CCF8000CC3796 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F2261931267CCF8000CC3796 /* ZIPFoundation */; };
-		F2261936267CD45800CC3796 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = F2261935267CD45800CC3796 /* NIO */; };
-		F2261938267CD46700CC3796 /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = F2261937267CD46700CC3796 /* NIO */; };
 		F2C5C2FF267FD21C008E2F5D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5C2FE267FD21C008E2F5D /* AppData.swift */; };
 		F2C5C300267FD21C008E2F5D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5C2FE267FD21C008E2F5D /* AppData.swift */; };
 		F2CAA6E62680E9A000D1ADDB /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAA6E52680E9A000D1ADDB /* utils.swift */; };
 		F2CAA6E72680E9A000D1ADDB /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAA6E52680E9A000D1ADDB /* utils.swift */; };
+		F2CAA7532682DF0000D1ADDB /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F2CAA7522682DF0000D1ADDB /* ZIPFoundation */; };
+		F2CAA7542682DF0700D1ADDB /* Open Shop Channel Downloader.app in Resources */ = {isa = PBXBuildFile; fileRef = F22618F2267CCDD900CC3796 /* Open Shop Channel Downloader.app */; };
+		F2CAA75C2682E09800D1ADDB /* Socket in Frameworks */ = {isa = PBXBuildFile; productRef = F2CAA75B2682E09800D1ADDB /* Socket */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +42,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = F22618F7267CCDD900CC3796;
 			remoteInfo = "Open Shop Channel Downloader (macOS)";
+		};
+		F2CAA7552682DF0700D1ADDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F22618E6267CCDD700CC3796 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F22618F1267CCDD900CC3796;
+			remoteInfo = "Open Shop Channel Downloader (iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,6 +67,7 @@
 		F2261933267CCF9F00CC3796 /* Open Shop Channel Downloader.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Open Shop Channel Downloader.entitlements"; sourceTree = "<group>"; };
 		F2C5C2FE267FD21C008E2F5D /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		F2CAA6E52680E9A000D1ADDB /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		F2CAA75A2682E08700D1ADDB /* BlueSocket-2.0.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "BlueSocket-2.0.0"; path = "../../../../Downloads/BlueSocket-2.0.0"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2261932267CCF8000CC3796 /* ZIPFoundation in Frameworks */,
-				F2261938267CD46700CC3796 /* NIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F226192F267CCF5000CC3796 /* ZIPFoundation in Frameworks */,
-				F2261936267CD45800CC3796 /* NIO in Frameworks */,
+				F2CAA7532682DF0000D1ADDB /* ZIPFoundation in Frameworks */,
+				F2CAA75C2682E09800D1ADDB /* Socket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,7 @@
 		F22618E5267CCDD700CC3796 = {
 			isa = PBXGroup;
 			children = (
+				F2CAA7472682CE8800D1ADDB /* Packages */,
 				F2261933267CCF9F00CC3796 /* Open Shop Channel Downloader.entitlements */,
 				F22618EA267CCDD700CC3796 /* Shared */,
 				F2261900267CCDD900CC3796 /* Tests iOS */,
@@ -159,6 +166,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F2CAA7472682CE8800D1ADDB /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				F2CAA75A2682E08700D1ADDB /* BlueSocket-2.0.0 */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,7 +192,6 @@
 			name = "Open Shop Channel Downloader (iOS)";
 			packageProductDependencies = (
 				F2261931267CCF8000CC3796 /* ZIPFoundation */,
-				F2261937267CD46700CC3796 /* NIO */,
 			);
 			productName = "Open Shop Channel Downloader (iOS)";
 			productReference = F22618F2267CCDD900CC3796 /* Open Shop Channel Downloader.app */;
@@ -194,11 +208,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				F2CAA7562682DF0700D1ADDB /* PBXTargetDependency */,
 			);
 			name = "Open Shop Channel Downloader (macOS)";
 			packageProductDependencies = (
-				F226192E267CCF5000CC3796 /* ZIPFoundation */,
-				F2261935267CD45800CC3796 /* NIO */,
+				F2CAA7522682DF0000D1ADDB /* ZIPFoundation */,
+				F2CAA75B2682E09800D1ADDB /* Socket */,
 			);
 			productName = "Open Shop Channel Downloader (macOS)";
 			productReference = F22618F8267CCDD900CC3796 /* Open Shop Channel Downloader.app */;
@@ -277,7 +292,6 @@
 			mainGroup = F22618E5267CCDD700CC3796;
 			packageReferences = (
 				F226192D267CCF5000CC3796 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
-				F2261934267CD45800CC3796 /* XCRemoteSwiftPackageReference "swift-nio" */,
 			);
 			productRefGroup = F22618F3267CCDD900CC3796 /* Products */;
 			projectDirPath = "";
@@ -304,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2CAA7542682DF0700D1ADDB /* Open Shop Channel Downloader.app in Resources */,
 				F2261912267CCDD900CC3796 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F226190F267CCDD900CC3796 /* ContentView.swift in Sources */,
-				F226192B267CCEE900CC3796 /* wiiload.swift in Sources */,
 				F2261928267CCE4A00CC3796 /* osc.swift in Sources */,
 				F2CAA6E62680E9A000D1ADDB /* utils.swift in Sources */,
 				F226190D267CCDD900CC3796 /* Open_Shop_Channel_DownloaderApp.swift in Sources */,
@@ -379,6 +393,11 @@
 			isa = PBXTargetDependency;
 			target = F22618F7267CCDD900CC3796 /* Open Shop Channel Downloader (macOS) */;
 			targetProxy = F2261908267CCDD900CC3796 /* PBXContainerItemProxy */;
+		};
+		F2CAA7562682DF0700D1ADDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F22618F1267CCDD900CC3796 /* Open Shop Channel Downloader (iOS) */;
+			targetProxy = F2CAA7552682DF0700D1ADDB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -777,36 +796,22 @@
 				minimumVersion = 0.9.9;
 			};
 		};
-		F2261934267CD45800CC3796 /* XCRemoteSwiftPackageReference "swift-nio" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-nio.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F226192E267CCF5000CC3796 /* ZIPFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F226192D267CCF5000CC3796 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
-			productName = ZIPFoundation;
-		};
 		F2261931267CCF8000CC3796 /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F226192D267CCF5000CC3796 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
 			productName = ZIPFoundation;
 		};
-		F2261935267CD45800CC3796 /* NIO */ = {
+		F2CAA7522682DF0000D1ADDB /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F2261934267CD45800CC3796 /* XCRemoteSwiftPackageReference "swift-nio" */;
-			productName = NIO;
+			package = F226192D267CCF5000CC3796 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
+			productName = ZIPFoundation;
 		};
-		F2261937267CD46700CC3796 /* NIO */ = {
+		F2CAA75B2682E09800D1ADDB /* Socket */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F2261934267CD45800CC3796 /* XCRemoteSwiftPackageReference "swift-nio" */;
-			productName = NIO;
+			productName = Socket;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

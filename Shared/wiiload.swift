@@ -7,7 +7,8 @@
 
 import Foundation
 import ZIPFoundation
-import NIO
+import Socket
+
 
 class WiiLoad {
     public var CHUNK_SIZE = 1024 * 128
@@ -58,22 +59,21 @@ class WiiLoad {
     }
     
     func connect() {
-        let group = MultiThreadedEventLoopGroup(numberOfThreads: System.coreCount)
         do {
-            let client = try ClientBootstrap(group: group)
-                .connect(host: "192.168.2.44", port: 4299)
-                .wait()
+            let client = try Socket.create()
+            let startTime = Date()
+            try client.connect(to: "192.168.2.44", port: 4299)
+            print(Date().timeIntervalSince(startTime))
             
-            client.writeAndFlush(ByteBuffer(bytes: [0x72, 0x65, 0x88, 0x88]))
-            client.writeAndFlush(ByteBuffer(string: "0"))
-            client.writeAndFlush(ByteBuffer(string: "0"))
-            client.writeAndFlush(ByteBuffer(integer: 0.littleEndian))
-            client.writeAndFlush(ByteBuffer(integer: 0.littleEndian))
-            client.writeAndFlush(ByteBuffer(integer: 548684.bigEndian))
-            client.writeAndFlush(ByteBuffer(integer: 5858858.bigEndian))
-        } catch {
-            print("Connection Failed: \(error)")
+            try client.write(from: "HAXX".data(using: String.Encoding.utf8)!)
+            try client.write(from: pack("=B", [0]))
+            try client.write(from: pack("=B", [5]))
+            try client.write(from: pack(">H", [0]))
+            try client.write(from: pack(">L", [100000]))
+            try client.write(from: pack(">L", [1000]))
         }
-        
+        catch {
+            print("Error.")
+        }
     }
 }

@@ -42,7 +42,7 @@ struct AppData: View {
                 if result == .OK {
                     panel.close()
                     let saveURL = panel.url
-                    getZip(filepath: saveURL!, url: data.zip_url)
+                    WiiLoad().connect()
                 }
             }
                 .padding(.top, -190)
