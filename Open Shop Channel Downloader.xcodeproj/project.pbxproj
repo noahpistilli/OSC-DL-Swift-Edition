@@ -19,6 +19,8 @@
 		F2261929267CCE4A00CC3796 /* osc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2261927267CCE4A00CC3796 /* osc.swift */; };
 		F226192C267CCEE900CC3796 /* wiiload.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226192A267CCEE800CC3796 /* wiiload.swift */; };
 		F2261932267CCF8000CC3796 /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = F2261931267CCF8000CC3796 /* ZIPFoundation */; };
+		F2B1644026D18993003E5B33 /* BinUtils in Frameworks */ = {isa = PBXBuildFile; productRef = F2B1643F26D18993003E5B33 /* BinUtils */; };
+		F2B1644226D189D2003E5B33 /* BinUtils in Frameworks */ = {isa = PBXBuildFile; productRef = F2B1644126D189D2003E5B33 /* BinUtils */; };
 		F2C5C2FF267FD21C008E2F5D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5C2FE267FD21C008E2F5D /* AppData.swift */; };
 		F2C5C300267FD21C008E2F5D /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C5C2FE267FD21C008E2F5D /* AppData.swift */; };
 		F2CAA6E62680E9A000D1ADDB /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CAA6E52680E9A000D1ADDB /* utils.swift */; };
@@ -77,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B1644026D18993003E5B33 /* BinUtils in Frameworks */,
 				F2261932267CCF8000CC3796 /* ZIPFoundation in Frameworks */,
 				F2DDA5FF26CF535000FDE091 /* Socket in Frameworks */,
 			);
@@ -86,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2B1644226D189D2003E5B33 /* BinUtils in Frameworks */,
 				F2CAA7532682DF0000D1ADDB /* ZIPFoundation in Frameworks */,
 				F2CAA75C2682E09800D1ADDB /* Socket in Frameworks */,
 			);
@@ -189,6 +193,7 @@
 			packageProductDependencies = (
 				F2261931267CCF8000CC3796 /* ZIPFoundation */,
 				F2DDA5FE26CF535000FDE091 /* Socket */,
+				F2B1643F26D18993003E5B33 /* BinUtils */,
 			);
 			productName = "Open Shop Channel Downloader (iOS)";
 			productReference = F22618F2267CCDD900CC3796 /* Open Shop Channel Downloader.app */;
@@ -211,6 +216,7 @@
 			packageProductDependencies = (
 				F2CAA7522682DF0000D1ADDB /* ZIPFoundation */,
 				F2CAA75B2682E09800D1ADDB /* Socket */,
+				F2B1644126D189D2003E5B33 /* BinUtils */,
 			);
 			productName = "Open Shop Channel Downloader (macOS)";
 			productReference = F22618F8267CCDD900CC3796 /* Open Shop Channel Downloader.app */;
@@ -290,6 +296,7 @@
 			packageReferences = (
 				F226192D267CCF5000CC3796 /* XCRemoteSwiftPackageReference "ZIPFoundation" */,
 				F2DDA5FD26CF535000FDE091 /* XCRemoteSwiftPackageReference "BlueSocket" */,
+				F2B1643E26D18993003E5B33 /* XCRemoteSwiftPackageReference "BinUtils" */,
 			);
 			productRefGroup = F22618F3267CCDD900CC3796 /* Products */;
 			projectDirPath = "";
@@ -798,6 +805,14 @@
 				minimumVersion = 0.9.9;
 			};
 		};
+		F2B1643E26D18993003E5B33 /* XCRemoteSwiftPackageReference "BinUtils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SketchMaster2001/BinUtils";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		F2DDA5FD26CF535000FDE091 /* XCRemoteSwiftPackageReference "BlueSocket" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Kitura/BlueSocket.git";
@@ -813,6 +828,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F226192D267CCF5000CC3796 /* XCRemoteSwiftPackageReference "ZIPFoundation" */;
 			productName = ZIPFoundation;
+		};
+		F2B1643F26D18993003E5B33 /* BinUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B1643E26D18993003E5B33 /* XCRemoteSwiftPackageReference "BinUtils" */;
+			productName = BinUtils;
+		};
+		F2B1644126D189D2003E5B33 /* BinUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2B1643E26D18993003E5B33 /* XCRemoteSwiftPackageReference "BinUtils" */;
+			productName = BinUtils;
 		};
 		F2CAA7522682DF0000D1ADDB /* ZIPFoundation */ = {
 			isa = XCSwiftPackageProductDependency;

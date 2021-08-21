@@ -8,7 +8,7 @@
 import Foundation
 import ZIPFoundation
 import Socket
-
+import BinUtils
 
 class WiiLoad {
     public var CHUNK_SIZE = 1024 * 128

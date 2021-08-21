@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "BinUtils",
+        "repositoryURL": "https://github.com/SketchMaster2001/BinUtils",
+        "state": {
+          "branch": "master",
+          "revision": "a6a088efaaeba8cc8e64f046de23f4906427f0e5",
+          "version": null
+        }
+      },
+      {
         "package": "Socket",
         "repositoryURL": "https://github.com/Kitura/BlueSocket.git",
         "state": {
