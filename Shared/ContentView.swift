@@ -26,7 +26,7 @@ struct OSC_DB: View {
     
     var body: some View {
         NavigationView {
-            List(data) {data in
+            List(data) { data in
                 NavigationLink(destination: AppData(data: data)) {
                     HStack {
                         Image("\(data.category)")
@@ -36,16 +36,17 @@ struct OSC_DB: View {
                         Text(data.coder)
                             .font(.subheadline)
                     }
-                    .navigationTitle(Text("Open Shop Channel Downloader"))
+                    .navigationTitle(Text("Open Shop Channel"))
                 }
             }
+            .listStyle(.sidebar)
             .onAppear() {
                     if Reachability.isConnectedToNetwork(){
-                        OSCAPI().getData { (data) in
+                        OSCAPI().getData { data in
                             self.data = data
                         }
-                    }else{
-                        OSCAPI().offlineData { (data) in
+                    } else {
+                        OSCAPI().offlineData { data in
                             self.data = data
                         }
                     }

@@ -1,33 +1,37 @@
 {
   "images" : [
     {
+      "filename" : "oscdliconmodifiedforsketch-18.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-17.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-15.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-16.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "about-open-version-14.png",
+      "filename" : "oscdliconmodifiedforsketch-13.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "about-open-version-13.png",
+      "filename" : "oscdliconmodifiedforsketch-14.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
@@ -45,46 +49,55 @@
       "size" : "60x60"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-19.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "20x20"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-20.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-21.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-22.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-23.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-24.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-25.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-26.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "oscdliconmodifiedforsketch-27.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"

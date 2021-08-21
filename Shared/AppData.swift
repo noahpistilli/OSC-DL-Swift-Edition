@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Socket
 
 struct AppData: View {
     var data: OSCData
@@ -20,7 +21,7 @@ struct AppData: View {
         VStack(alignment: .leading) {
             Text(data.display_name)
                 .font(.title)
-                .padding(.top, -170)
+                .padding(.top, -175)
                 .padding(.leading, 5)
             Text(data.short_description)
                 .font(.title3)
@@ -42,7 +43,7 @@ struct AppData: View {
                 if result == .OK {
                     panel.close()
                     let saveURL = panel.url
-                    WiiLoad().connect()
+                    getZip(filepath: saveURL!, url: data.zip_url)
                 }
             }
                 .padding(.top, -190)
@@ -56,7 +57,7 @@ struct AppData: View {
                 getZip(filepath: URL(string: "moment")!, url: data.zip_url)
             }
             .buttonStyle(RoundedRectangleButtonStyle())
-            .offset(y: 150)
+            .offset(y: 200)
             #endif
             Divider()
                 .padding(.top, -150)
@@ -686,7 +687,12 @@ struct AppData: View {
                 if progress != 0 {
                     ProgressView(progressText, value: progress, total: total)
                         .progressViewStyle(LinearProgressViewStyle())
+                    #if os(macOS)
                         .offset(x: 0, y: 100)
+                    #elseif os(iOS)
+                        .padding(.top, 60)
+                        .offset(x: 0, y: 120)
+                    #endif
                 }
                 if progress == 1 {
                     Text("")
@@ -697,12 +703,14 @@ struct AppData: View {
             }
         }
     }
+    
     // Download ZIP from OSC servers
     func getZip(filepath: URL, url: String) {
         #if os(iOS)
         var filepath = FileManager.default.urls(for: .documentDirectory,
-                                                        in: .userDomainMask)[0]
+                                               in: .userDomainMask).first!
         filepath = filepath.appendingPathComponent("\(data.internal_name).zip")
+        print(filepath)
         #endif
         let zipURL = URL(string: url)
         dataTask = URLSession.shared.downloadTask(with: zipURL!) { (tempFileUrl, response, error) in
@@ -713,7 +721,7 @@ struct AppData: View {
                 let zipData = try Data(contentsOf: zipTempFileUrl)
                 try zipData.write(to: filepath)
             } catch {
-                print("error")
+                print(error)
             }
         }
         observation = dataTask?.progress.observe(\.fractionCompleted) { (observationProgress, _) in
@@ -724,5 +732,10 @@ struct AppData: View {
         dataTask?.resume()
     }
 }
+
+
+
+
+
 
 
